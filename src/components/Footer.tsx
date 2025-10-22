@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Facebook, Twitter, Instagram } from "lucide-react";
+
+import NewsletterSignup from "./NewsLetterSignUp";
 
 import logo from "../assets/teacher_logo.svg";
 
@@ -118,30 +117,7 @@ const Footer = () => {
           </div>
           {/* Newsletter Signup */}
           <div className="md:col-span-1">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-xl">
-              <CardHeader className="text-center">
-                <CardTitle className="text-purple-200 text-lg">
-                  Stay Updated
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-300 text-sm opacity-80">
-                  Subscribe for tips and offers.
-                </p>
-                <div className="flex gap-2">
-                  <Input
-                    placeholder="Your email"
-                    className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:ring-purple-500"
-                  />
-                  <Button
-                    size="sm"
-                    className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 rounded-lg"
-                  >
-                    Subscribe
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <NewsletterSignup />
           </div>
         </div>
         {/* Bottom Bar */}
