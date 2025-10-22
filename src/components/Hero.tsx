@@ -56,9 +56,6 @@ const HeroSection = () => {
             alt="Diverse students collaborating on English lessons around a table with laptops and books"
             className="w-full h-[500px] object-cover rounded-3xl shadow-2xl group-hover:shadow-3xl transition-shadow duration-500"
           />
-          <div className="absolute top-6 right-6 bg-gradient-to-br from-orange-500 to-orange-400 text-white rounded-full w-12 h-12 flex items-center justify-center text-sm font-bold shadow-lg ring-2 ring-white/20 transform group-hover:scale-110 transition-transform">
-            ⭐
-          </div>
         </div>
       </div>
     </section>
