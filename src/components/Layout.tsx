@@ -9,7 +9,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+import logo from "../assets/teacher_logo.svg";
+
 import { UserButton, SignedIn, SignedOut } from "@clerk/clerk-react";
+
 import { useScrollToTop } from "@/hooks/ScrollToTop";
 
 interface LayoutProps {
@@ -29,9 +33,9 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 lg:px-6 py-4 flex justify-between items-center">
           <Link
             to="/"
-            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent hover:from-purple-700 hover:to-purple-800 transition-all duration-300"
+            className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-purple-500 bg-clip-text text-transparent hover:from-purple-700 hover:to-purple-800 transition-all duration-300 flex items-center justify-center gap-3"
           >
-            📖 EnglishMentor
+            <img src={logo} alt="logo" className="size-8" /> Your Tutor
           </Link>
           <nav className="hidden md:flex space-x-8">
             <Link

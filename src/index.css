@@ -31,6 +31,9 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+    --muted-purple: 252 100% 90%; /* Soft purple bg */
+    --accent-purple: 262 100% 85%; /* Muted accent */
+    --text-muted: 224 71% 69%; /* Softer gray text */
   }
 
   .dark {
@@ -86,7 +89,7 @@
 html {
   scroll-behavior: smooth;
 }
-a,
-Link {
-  scroll-margin-top: 6.3rem;
+
+button {
+  cursor: pointer;
 }

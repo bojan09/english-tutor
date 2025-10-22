@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CalendarIcon, MailIcon } from "lucide-react"; // Add icons for modernity
+import { CalendarIcon, Mail } from "lucide-react";
 
-const Hero = () => {
+import hero_img from "../assets/hero_img.jpg";
+
+const HeroSection = () => {
   return (
     <section className="relative bg-white py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-white to-purple-50/30" />
@@ -19,26 +21,29 @@ const Hero = () => {
           learning journey.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
-          {/* Primary Button: Gradient with icon and glow */}
+          {/* Primary Button */}
           <Button
             asChild
             size="lg"
-            className="group relative bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-xl font-semibold px-8 py-4 shadow-lg hover:shadow-2xl/50 ring-1 ring-purple-500/20 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 text-gray-100"
+            className="group relative bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-xl font-semibold px-8 py-4 shadow-lg hover:shadow-2xl/50 ring-1 ring-purple-500/20 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 rounded-full"
           >
             <Link to="/book-session" className="flex items-center gap-2">
-              <CalendarIcon className="h-5 w-5 group-hover:rotate-12 transition-transform" />
+              <CalendarIcon
+                className="h-5 w-5 group-hover:rotate-12 transition-transform stroke-white"
+                strokeWidth={2.5}
+              />
               Book Your First Session
             </Link>
           </Button>
-          {/* Secondary Button: Ghost pill with underline hover */}
+          {/* Secondary Button */}
           <Button
             asChild
             variant="ghost"
             size="lg"
-            className="text-xl font-medium px-8 py-4 text-purple-700 hover:text-purple-900 hover:bg-transparent border-transparent hover:border-b-2 hover:border-purple-500 transition-all duration-300 relative overflow-hidden"
+            className="text-xl font-medium px-8 py-4 text-purple-700 hover:text-purple-900 hover:bg-transparent border-transparent hover:border-b-2 hover:border-purple-500 transition-all duration-300 rounded-full relative overflow-hidden"
           >
             <Link to="/contact" className="flex items-center gap-2">
-              <MailIcon className="h-5 w-5" />
+              <Mail className="h-5 w-5" strokeWidth={2.5} />
               Get in Touch
             </Link>
           </Button>
@@ -47,7 +52,7 @@ const Hero = () => {
         <div className="relative mx-auto max-w-5xl mt-16 group">
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/10 to-transparent rounded-3xl" />
           <img
-            src="https://image.shutterstock.com/image-photo/vertical-high-angle-view-diverse-600w-2525627101.jpg"
+            src={hero_img}
             alt="Diverse students collaborating on English lessons around a table with laptops and books"
             className="w-full h-[500px] object-cover rounded-3xl shadow-2xl group-hover:shadow-3xl transition-shadow duration-500"
           />
@@ -60,4 +65,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

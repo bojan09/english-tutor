@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Facebook, Twitter, Instagram } from "lucide-react"; // Removed unused: Mail, Calendar, Phone
+import { Facebook, Twitter, Instagram } from "lucide-react";
+
+import logo from "../assets/teacher_logo.svg";
 
 const Footer = () => {
   const dotPattern =
@@ -21,9 +23,9 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link
               to="/"
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent mb-4 inline-block"
+              className="text-2xl font-bold bg-gradient-to-r from-purple-200 to-purple-600 bg-clip-text text-transparent mb-4 flex items-center gap-3"
             >
-              📖 EnglishMentor
+              <img src={logo} alt="logo" className="size-8" /> Your Tutor
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-6 opacity-80">
               Empowering your English journey with expert, personalized
