@@ -25,7 +25,7 @@ const HeroSection = () => {
           <Button
             asChild
             size="lg"
-            className="group relative bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-xl font-semibold px-8 py-4 shadow-lg hover:shadow-2xl/50 ring-1 ring-purple-500/20 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 rounded-full"
+            className="group relative bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-xl font-semibold px-8 py-6 shadow-lg hover:shadow-2xl/50 ring-1 ring-purple-500/20 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 text-gray-100"
           >
             <Link to="/book-session" className="flex items-center gap-2">
               <CalendarIcon
@@ -40,7 +40,7 @@ const HeroSection = () => {
             asChild
             variant="ghost"
             size="lg"
-            className="text-xl font-medium px-8 py-4 text-purple-700 hover:text-purple-900 hover:bg-transparent border-transparent hover:border-b-2 hover:border-purple-500 transition-all duration-300 rounded-full relative overflow-hidden"
+            className="text-xl font-medium px-8 py-6 text-purple-700 hover:text-purple-900 hover:bg-transparent border-transparent hover:border-b-2 hover:border-purple-500 transition-all duration-300 relative overflow-hidden"
           >
             <Link to="/contact" className="flex items-center gap-2">
               <Mail className="h-5 w-5" strokeWidth={2.5} />

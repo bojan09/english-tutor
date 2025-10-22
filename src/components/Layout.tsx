@@ -35,7 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
             to="/"
             className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-purple-500 bg-clip-text text-transparent hover:from-purple-700 hover:to-purple-800 transition-all duration-300 flex items-center justify-center gap-3"
           >
-            <img src={logo} alt="logo" className="size-8" /> Your Tutor
+            <img src={logo} alt="logo" className="size-8" /> My English Tutor
           </Link>
           <nav className="hidden md:flex space-x-8">
             <Link

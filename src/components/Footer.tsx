@@ -25,7 +25,7 @@ const Footer = () => {
               to="/"
               className="text-2xl font-bold bg-gradient-to-r from-purple-200 to-purple-600 bg-clip-text text-transparent mb-4 flex items-center gap-3"
             >
-              <img src={logo} alt="logo" className="size-8" /> Your Tutor
+              <img src={logo} alt="logo" className="size-8" /> My English Tutor
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-6 opacity-80">
               Empowering your English journey with expert, personalized
