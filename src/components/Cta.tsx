@@ -14,7 +14,7 @@ const CTA = () => {
         style={{ backgroundRepeat: "repeat" }} // Ensures repeat (Tailwind fallback)
       />
       <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
-        <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-6xl font-bold pb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
           Ready to Start Your English Journey?
         </h2>
         <p className="text-xl md:text-2xl text-purple-100 mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">

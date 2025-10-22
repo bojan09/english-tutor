@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
     <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-purple-800 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-purple-800 bg-clip-text text-transparent pb-6">
             Why Choose EnglishMentor?
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
