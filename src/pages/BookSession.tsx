@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
+import { Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,6 +10,12 @@ import {
 } from "@/components/ui/card";
 
 const BookSession = () => {
+  const { isSignedIn } = useUser();
+
+  if (!isSignedIn) {
+    return <Navigate to="/" replace />; // Or show sign in prompt
+  }
+
   return (
     <div className="py-20">
       <div className="container mx-auto px-4">
