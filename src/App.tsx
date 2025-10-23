@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import BookSession from "./pages/BookSession";
@@ -51,7 +51,16 @@ function App() {
         />
 
         {/* Protected routes with Layout */}
-        <Route path="/book-session" element={<BookSession />} />
+        <Route
+          path="/book-session"
+          element={
+            <SignedIn>
+              <Layout>
+                <BookSession />
+              </Layout>
+            </SignedIn>
+          }
+        />
 
         {/* Fallback: Redirect unauth to sign-in */}
         <Route
