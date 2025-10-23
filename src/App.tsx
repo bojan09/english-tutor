@@ -54,11 +54,9 @@ function App() {
         <Route
           path="/book-session"
           element={
-            <SignedIn>
-              <Layout>
-                <BookSession />
-              </Layout>
-            </SignedIn>
+            <Layout>
+              <BookSession />
+            </Layout>
           }
         />
 
