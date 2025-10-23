@@ -51,14 +51,7 @@ function App() {
         />
 
         {/* Protected routes with Layout */}
-        <Route
-          path="/book-session"
-          element={
-            <Layout>
-              <BookSession />
-            </Layout>
-          }
-        />
+        <Route path="/book-session" element={<BookSession />} />
 
         {/* Fallback: Redirect unauth to sign-in */}
         <Route
