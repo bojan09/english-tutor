@@ -11,11 +11,11 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   useScrollToTop();
 
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState({ message: "", type: "" });
   const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
     setStatus({ message: "", type: "" });
@@ -40,7 +40,7 @@ const Contact = () => {
         .then((result) => {
           console.log("Email sent:", result.text);
           setStatus({ message: "Message sent successfully!", type: "success" });
-          form.current.reset();
+          form.current?.reset();
           setIsSending(false);
           setTimeout(() => {
             setStatus({ message: "", type: "" });

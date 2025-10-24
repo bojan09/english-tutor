@@ -1,24 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "lucide-react";
 import NewsletterSignup from "./NewsLetterSignUp";
 import logo from "../assets/teacher_logo.svg";
 
 const Footer = () => {
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
-
   // SVG data URI for dot pattern with rich gold fill and increased opacity
   const dotPattern =
     "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.25'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
-
-  // Handler for logo click: Scroll to top if on home, else navigate
-  const handleLogoClick = (e) => {
-    if (isHome) {
-      e.preventDefault(); // Prevent default navigation
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-    // Else, normal navigation via Link
-  };
 
   return (
     <footer className="relative bg-gradient-to-bl from-blue-500 to-blue-700 text-white py-12 overflow-hidden mt-24 opacity-90">
@@ -32,7 +20,6 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link
               to="/"
-              onClick={handleLogoClick}
               className="text-2xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent hover:from-white hover:to-blue-300 transition-all duration-300 flex gap-3 mb-4 items-center"
             >
               <img src={logo} alt="MyEnglishTutor Logo" className="size-8" />{" "}
