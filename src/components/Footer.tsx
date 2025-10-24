@@ -3,15 +3,25 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 
 import NewsletterSignup from "./NewsLetterSignUp";
 
+const isHome = location.pathname === "/";
+
 import logo from "../assets/teacher_logo.svg";
 
 const Footer = () => {
   const dotPattern =
     "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
 
+  // Handler for logo click: Scroll to top if on home, else navigate
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (isHome) {
+      e.preventDefault(); // Prevent default navigation
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    // Else, normal navigation via Link
+  };
+
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden mt-24">
-      {/* Subtle Dot Pattern */}
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-10 overflow-hidden mt-24">
       <div
         className={`absolute inset-0 bg-[url('${dotPattern}')] bg-[size:60px_60px] opacity-10`}
         style={{ backgroundRepeat: "repeat" }}
@@ -22,7 +32,8 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link
               to="/"
-              className="text-2xl font-bold bg-gradient-to-r from-purple-200 to-purple-600 bg-clip-text text-transparent mb-4 flex items-center gap-3"
+              onClick={handleLogoClick}
+              className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-purple-500 bg-clip-text text-transparent hover:from-purple-700 hover:to-purple-800 transition-all duration-300 flex gap-3 mb-2"
             >
               <img src={logo} alt="logo" className="size-8" /> My English Tutor
             </Link>

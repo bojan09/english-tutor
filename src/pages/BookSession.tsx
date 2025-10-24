@@ -1,5 +1,5 @@
 import { useUser } from "@clerk/clerk-react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,18 +10,22 @@ import {
 } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 import { useScrollToTop } from "@/hooks/ScrollToTop";
+import SignInPrompt from "@/components/SignInPrompt";
 
 const BookSession = () => {
-  useScrollToTop(); // Smooth scroll to top on load
+  useScrollToTop();
 
   const { isSignedIn } = useUser();
 
   if (!isSignedIn) {
-    return <Navigate to="/" replace />;
+    return <SignInPrompt />;
   }
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50 py-20">
+    <section
+      id="book-session"
+      className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50 py-20"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-purple-800 bg-clip-text text-transparent pb-4">

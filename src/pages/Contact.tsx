@@ -2,13 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Mail, Phone, Clock, MessageCircle, HelpCircle } from "lucide-react";
+import { Mail, Phone, Clock, MessageCircle } from "lucide-react";
 import { useScrollToTop } from "@/hooks/ScrollToTop";
 
 const Contact = () => {
@@ -32,8 +26,6 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <div className="w-8 h-8 flex items-center justify-center bg-blue-100/80 rounded mr-2">
-                  {" "}
-                  {/* 80% opacity bg */}
                   <MessageCircle
                     className="h-5 w-5 stroke-blue-500"
                     strokeWidth={2}
@@ -70,11 +62,9 @@ const Contact = () => {
                 />
               </div>
               <Button className="w-full bg-gradient-to-r from-purple-500/90 to-purple-400/90 hover:from-purple-600/90 hover:to-purple-500/90">
-                {" "}
                 Sign In to Send Message
               </Button>
               <p className="text-sm text-gray-500/80 mt-4 text-center">
-                {" "}
                 Please sign in to send us a message. This helps us provide
                 personalized responses.
               </p>
@@ -86,7 +76,6 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <div className="w-8 h-8 flex items-center justify-center bg-blue-100/80 rounded mr-2">
-                    {" "}
                     <Mail
                       className="h-5 w-5 stroke-blue-500"
                       strokeWidth={2}
@@ -99,7 +88,6 @@ const Contact = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-8 h-8 flex items-center justify-center bg-blue-100/80 rounded mr-3">
-                    {" "}
                     <Mail
                       className="h-5 w-5 stroke-blue-500"
                       strokeWidth={2}
@@ -141,66 +129,6 @@ const Contact = () => {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-0 bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300 rounded-xl overflow-hidden">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <div className="w-8 h-8 flex items-center justify-center bg-indigo-100/80 rounded mr-2">
-                    <HelpCircle
-                      className="h-5 w-5 stroke-indigo-500"
-                      strokeWidth={2}
-                      fill="none"
-                    />
-                  </div>
-                  Frequently Asked Questions
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem
-                    value="item-1"
-                    className="border-b border-gray-200/50"
-                  >
-                    {" "}
-                    {/* Softer border opacity */}
-                    <AccordionTrigger className="text-gray-700 hover:text-purple-600 hover:no-underline focus:text-purple-600 focus-visible:ring-purple-400/50">
-                      {" "}
-                      {/* Softer focus ring */}
-                      How long are the tutoring sessions?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 bg-gray-50/50 px-4 py-3 rounded-md mt-2">
-                      {" "}
-                      {/* 50% opacity bg for content */}
-                      Standard sessions are 60 minutes, but we can customize the
-                      duration based on your needs.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem
-                    value="item-2"
-                    className="border-b border-gray-200/50"
-                  >
-                    <AccordionTrigger className="text-gray-700 hover:text-purple-600 hover:no-underline focus:text-purple-600 focus-visible:ring-purple-400/50">
-                      Can I reschedule a session?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 bg-gray-50/50 px-4 py-3 rounded-md mt-2">
-                      Yes, you can reschedule up to 24 hours before your session
-                      through your dashboard.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem
-                    value="item-3"
-                    className="border-b border-gray-200/50"
-                  >
-                    <AccordionTrigger className="text-gray-700 hover:text-purple-600 hover:no-underline focus:text-purple-600 focus-visible:ring-purple-400/50">
-                      What level of English do you teach?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 bg-gray-50/50 px-4 py-3 rounded-md mt-2">
-                      We teach all levels from beginner to advanced, including
-                      business English and exam preparation.
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </CardContent>
-            </Card>
           </div>
         </div>
         {/* Quick Response */}
@@ -208,8 +136,6 @@ const Contact = () => {
           <CardContent className="py-8 text-center space-y-4">
             <div className="flex items-center justify-center mb-4">
               <div className="w-8 h-8 flex items-center justify-center bg-blue-200/80 rounded-full mr-2">
-                {" "}
-                {/* 80% opacity */}
                 <Clock
                   className="h-5 w-5 stroke-blue-500"
                   strokeWidth={2}

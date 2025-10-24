@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
+import { SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import BookSession from "./pages/BookSession";
@@ -11,10 +11,7 @@ import Footer from "@/components/Footer";
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      {" "}
-      {/* Ensures full height, footer at bottom */}
       <Routes>
-        {/* Public routes with Layout */}
         <Route
           path="/"
           element={
@@ -31,8 +28,15 @@ function App() {
             </Layout>
           }
         />
+        <Route
+          path="/book-session"
+          element={
+            <Layout>
+              <BookSession />
+            </Layout>
+          }
+        />
 
-        {/* Auth pages (full-page, no Layout) */}
         <Route
           path="/sign-in/*"
           element={
@@ -47,18 +51,6 @@ function App() {
             <SignedOut>
               <SignUp />
             </SignedOut>
-          }
-        />
-
-        {/* Protected routes with Layout */}
-        <Route
-          path="/book-session"
-          element={
-            <SignedIn>
-              <Layout>
-                <BookSession />
-              </Layout>
-            </SignedIn>
           }
         />
 

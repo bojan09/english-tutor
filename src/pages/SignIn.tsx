@@ -1,6 +1,5 @@
 import { SignIn } from "@clerk/clerk-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 const SignInPage = () => {
@@ -13,9 +12,6 @@ const SignInPage = () => {
           </div>
           <Card className="bg-white shadow-md">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold text-gray-900">
-                <Button>Sign In</Button>
-              </CardTitle>
               <p className="text-sm text-gray-600 mt-2">
                 Welcome back to EnglishMentor
               </p>

@@ -9,7 +9,10 @@ import { BookOpen, User, Calendar } from "lucide-react";
 
 const WhatYouGet = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-purple-50 to-white">
+    <section
+      id="what-we-offer"
+      className="py-24 bg-gradient-to-b from-purple-50 to-white"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 pb-20 animate-slide-up bg-gradient-to-r from-purple-800 to-purple-700 bg-clip-text text-transparent">
           What You'll Get
