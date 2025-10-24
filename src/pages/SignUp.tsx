@@ -7,7 +7,7 @@ const SignUpPage = () => {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <div className="mx-auto h-12 w-12 bg-purple-600 rounded-full flex items-center justify-center mb-6">
+          <div className="mx-auto h-12 w-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
             <span className="text-white text-xl">📖</span>
           </div>
           <Card className="bg-white shadow-md">
@@ -22,8 +22,8 @@ const SignUpPage = () => {
                 appearance={{
                   elements: {
                     formButtonPrimary:
-                      "bg-purple-600 hover:bg-purple-700 text-white w-full",
-                    footerAction: "text-purple-600 hover:underline",
+                      "bg-blue-600 hover:bg-blue-700 text-white w-full",
+                    footerAction: "text-blue-600 hover:underline",
                   },
                 }}
               />
@@ -31,7 +31,7 @@ const SignUpPage = () => {
                 Already have an account?{" "}
                 <Link
                   to="/sign-in"
-                  className="font-medium text-purple-600 hover:text-purple-500"
+                  className="font-medium text-blue-600 hover:text-blue-500"
                 >
                   Sign in
                 </Link>

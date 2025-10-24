@@ -105,7 +105,7 @@ const Contact = () => {
                     name="email"
                     type="email"
                     placeholder="your.email@example.com"
-                    className="focus:ring-blue-400/50 border-gray-300/50 text-gray-900 placeholder-gray-400/70 focus:border-blue-400/50"
+                    className="focus:ring-blue-400/50 border-gray-300/50 text-gray-900 placeholder-gray-400/70 focus:border-blue-400/50 my-2"
                     required
                   />
                 </div>
@@ -115,7 +115,7 @@ const Contact = () => {
                     id="subject"
                     name="subject"
                     placeholder="What can we help you with?"
-                    className="focus:ring-blue-400/50 border-gray-300/50 text-gray-900 placeholder-gray-400/70 focus:border-blue-400/50"
+                    className="focus:ring-blue-400/50 border-gray-300/50 text-gray-900 placeholder-gray-400/70 focus:border-blue-400/50 my-2"
                     required
                   />
                 </div>
@@ -125,18 +125,21 @@ const Contact = () => {
                     id="message"
                     name="message"
                     rows={4}
-                    className="w-full focus:ring-blue-400/50 border-gray-300/50 text-gray-900 placeholder-gray-400/70 focus:border-blue-400/50 bg-white/80"
+                    className="w-full focus:ring-blue-400/50 border-gray-300/50 text-gray-900 placeholder-gray-400/70 focus:border-blue-400/50 bg-white/80 my-2"
                     placeholder="Tell us about your English learning goals, questions, or how we can help you..."
                     required
                   />
                 </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-amber-50"
-                  disabled={isSending}
-                >
-                  {isSending ? "Sending Message..." : "Send Message"}
-                </Button>
+
+                <div className="flex items-center justify-center mt-6 mb-2">
+                  <Button
+                    type="submit"
+                    className="w-fit bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-amber-50"
+                    disabled={isSending}
+                  >
+                    {isSending ? "Sending Message..." : "Send Message"}
+                  </Button>
+                </div>
               </form>
               {status.message && (
                 <div className="space-y-2">
@@ -164,34 +167,27 @@ const Contact = () => {
             <Card className="border-0 bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300 rounded-xl overflow-hidden">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <div className="w-8 h-8 flex items-center justify-center bg-blue-100/80 rounded mr-2">
-                    <Mail
-                      className="h-5 w-5 stroke-blue-600"
-                      strokeWidth={2}
-                      fill="none"
-                    />
-                  </div>
                   Contact Information
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 flex items-center justify-center bg-blue-100/80 rounded mr-3">
+                  <div className="w-8 h-8 flex items-center justify-center bg-orange-100/80 rounded mr-3">
                     <Mail
-                      className="h-5 w-5 stroke-blue-600"
+                      className="h-5 w-5 stroke-orange-600"
                       strokeWidth={2}
                       fill="none"
                     />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <p className="text-gray-700">hello@myenglishtutor.com</p>
+                    <p className="text-gray-700">myenglish.tutormk@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 flex items-center justify-center bg-yellow-100/80 rounded mr-3">
+                  <div className="w-8 h-8 flex items-center justify-center bg-green-100/80 rounded mr-3">
                     <Phone
-                      className="h-5 w-5 stroke-yellow-600"
+                      className="h-5 w-5 stroke-green-600"
                       strokeWidth={2}
                       fill="none"
                     />
@@ -202,9 +198,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 flex items-center justify-center bg-blue-100/80 rounded mr-3">
+                  <div className="w-8 h-8 flex items-center justify-center bg-purple-100/80 rounded mr-3">
                     <Clock
-                      className="h-5 w-5 stroke-blue-600"
+                      className="h-5 w-5 stroke-purple-600"
                       strokeWidth={2}
                       fill="none"
                     />

@@ -7,15 +7,15 @@ import hero_img from "../assets/hero_img.jpg";
 const HeroSection = () => {
   return (
     <section className="relative bg-white py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-white to-purple-50/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-blue-50" />
       <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-purple-900 bg-clip-text text-transparent mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent mb-6 leading-tight">
           Master English
-          <span className="block bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
             with Expert Guidance
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
           Unlock your potential with personalized English tutoring. Professional
           lessons, flexible scheduling, and dedicated support for your language
           learning journey.
@@ -25,7 +25,7 @@ const HeroSection = () => {
           <Button
             asChild
             size="lg"
-            className="group relative bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-xl font-semibold px-8 py-6 shadow-lg hover:shadow-2xl/50 ring-1 ring-purple-500/20 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 text-gray-100"
+            className="group relative bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-xl font-semibold px-8 py-6 text-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             <Link to="/book-session" className="flex items-center gap-2">
               <CalendarIcon
@@ -40,7 +40,7 @@ const HeroSection = () => {
             asChild
             variant="ghost"
             size="lg"
-            className="text-xl font-medium px-8 py-6 text-purple-700 hover:text-purple-900 hover:bg-transparent border-transparent hover:border-b-2 hover:border-purple-500 transition-all duration-300 relative overflow-hidden"
+            className="text-xl font-medium px-8 py-6 text-blue-700 hover:text-blue-900 hover:bg-blue-50/50 rounded-lg border-transparent transition-all duration-300 relative overflow-hidden shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             <Link to="/contact" className="flex items-center gap-2">
               <Mail className="h-5 w-5" strokeWidth={2.5} />
@@ -50,7 +50,7 @@ const HeroSection = () => {
         </div>
         {/* Hero Image with Gradient Overlay */}
         <div className="relative mx-auto max-w-5xl mt-16 group">
-          <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/10 to-transparent rounded-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent rounded-3xl" />
           <img
             src={hero_img}
             alt="Diverse students collaborating on English lessons around a table with laptops and books"

@@ -13,13 +13,9 @@ const NewsletterSignup = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
-  // Auto-hide success message after 3 seconds
-
   useEffect(() => {
     if (success) {
-      const timer = setTimeout(() => {
-        setSuccess(false);
-      }, 3000);
+      const timer = setTimeout(() => setSuccess(false), 3000);
       return () => clearTimeout(timer);
     }
   }, [success]);
@@ -39,7 +35,7 @@ const NewsletterSignup = () => {
         { email }
       );
       setSuccess(true);
-      setEmail(""); // Clear input
+      setEmail("");
     } catch (err) {
       setError("Failed to subscribe. Please try again.");
       console.error("EmailJS error:", err);
@@ -49,26 +45,31 @@ const NewsletterSignup = () => {
   };
 
   return (
-    <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-xl">
+    <Card className="bg-white/60 backdrop-blur-sm border border-blue-100 rounded-xl shadow-lg">
       <CardHeader className="text-center">
-        <CardTitle className="text-purple-200 text-lg">Stay Updated</CardTitle>
+        <CardTitle className="text-gray-800 text-lg font-semibold">
+          Stay Updated
+        </CardTitle>
       </CardHeader>
+
       <CardContent className="space-y-4">
-        <p className="text-gray-300 text-sm opacity-80">
+        <p className="text-gray-700 text-sm opacity-90">
           Subscribe for tips and offers.
         </p>
+
         <form onSubmit={handleSubmit} className="flex gap-2">
           <Input
             placeholder="Your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:ring-purple-500 flex-1"
+            className="bg-white border border-blue-200 text-gray-800 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 flex-1 rounded-lg"
             disabled={isLoading || success}
           />
+
           <Button
             type="submit"
             size="sm"
-            className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 rounded-lg min-w-[100px]"
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg min-w-[100px] shadow-md hover:shadow-lg transition-all duration-300"
             disabled={isLoading || success || !email}
           >
             {isLoading ? (
@@ -80,19 +81,21 @@ const NewsletterSignup = () => {
             )}
           </Button>
         </form>
+
         {success && (
-          <div className="text-green-300 text-xs space-y-1 flex flex-col items-center gap-1">
+          <div className="text-green-600 text-xs space-y-1 flex flex-col items-center gap-1">
             <div className="flex items-center gap-1">
               <CheckCircle className="h-3 w-3" />
               Thanks for subscribing!
             </div>
-            <p className="text-yellow-200/80 border-2 rounded-lg py-2 px-0 mt-2 text-center">
+            <p className="text-blue-700/80 border border-blue-200 rounded-lg py-2 px-2 mt-2 text-center bg-blue-50/50">
               If you don't receive an email, please check your spam/junk folder.
             </p>
           </div>
         )}
+
         {error && (
-          <p className="text-red-300 text-xs flex items-center gap-1 justify-center">
+          <p className="text-red-500 text-xs flex items-center gap-1 justify-center">
             <AlertCircle className="h-3 w-3" />
             {error}
           </p>

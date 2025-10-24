@@ -1,18 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "lucide-react";
-
 import NewsletterSignup from "./NewsLetterSignUp";
-
-const isHome = location.pathname === "/";
-
 import logo from "../assets/teacher_logo.svg";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+
+  // SVG data URI for dot pattern with rich gold fill and increased opacity
   const dotPattern =
-    "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
+    "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.25'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
 
   // Handler for logo click: Scroll to top if on home, else navigate
-  const handleLogoClick = (e: React.MouseEvent) => {
+  const handleLogoClick = (e) => {
     if (isHome) {
       e.preventDefault(); // Prevent default navigation
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -21,9 +21,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-10 overflow-hidden mt-24">
+    <footer className="relative bg-gradient-to-bl from-blue-500 to-blue-700 text-white py-12 overflow-hidden mt-24 opacity-90">
       <div
-        className={`absolute inset-0 bg-[url('${dotPattern}')] bg-[size:60px_60px] opacity-10`}
+        className={`absolute inset-0 bg-[url('${dotPattern}')] bg-[size:60px_60px] opacity-25 backdrop-blur-sm`}
         style={{ backgroundRepeat: "repeat" }}
       />
       <div className="container mx-auto px-4 relative z-10">
@@ -33,45 +33,46 @@ const Footer = () => {
             <Link
               to="/"
               onClick={handleLogoClick}
-              className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-purple-500 bg-clip-text text-transparent hover:from-purple-700 hover:to-purple-800 transition-all duration-300 flex gap-3 mb-2"
+              className="text-2xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent hover:from-white hover:to-blue-300 transition-all duration-300 flex gap-3 mb-4 items-center"
             >
-              <img src={logo} alt="logo" className="size-8" /> My English Tutor
+              <img src={logo} alt="MyEnglishTutor Logo" className="size-8" />{" "}
+              MyEnglishTutor
             </Link>
-            <p className="text-gray-300 text-sm leading-relaxed mb-6 opacity-80">
+            <p className="text-gray-200 text-sm leading-relaxed mb-6 opacity-90 font-light">
               Empowering your English journey with expert, personalized
               tutoring.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="group p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                className="group p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
               >
-                <Facebook className="h-5 w-5 text-white group-hover:text-purple-400" />
+                <Facebook className="h-5 w-5 text-white group-hover:text-yellow-600" />
               </a>
               <a
                 href="#"
-                className="group p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                className="group p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
               >
-                <Twitter className="h-5 w-5 text-white group-hover:text-purple-400" />
+                <Twitter className="h-5 w-5 text-white group-hover:text-yellow-600" />
               </a>
               <a
                 href="#"
-                className="group p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                className="group p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
               >
-                <Instagram className="h-5 w-5 text-white group-hover:text-purple-400" />
+                <Instagram className="h-5 w-5 text-white group-hover:text-yellow-600" />
               </a>
             </div>
           </div>
           {/* Quick Links */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-purple-200">
+            <h4 className="text-lg font-semibold mb-4 text-blue-100">
               Quick Links
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   to="/"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 block"
+                  className="text-gray-200 hover:text-blue-50 transition-colors duration-200 block font-medium"
                 >
                   Home
                 </Link>
@@ -79,7 +80,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/book-session"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 block"
+                  className="text-gray-200 hover:text-blue-50 transition-colors duration-200 block font-medium"
                 >
                   Book Session
                 </Link>
@@ -87,7 +88,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 block"
+                  className="text-gray-200 hover:text-blue-50 transition-colors duration-200 block font-medium"
                 >
                   Contact
                 </Link>
@@ -96,14 +97,14 @@ const Footer = () => {
           </div>
           {/* Company */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-purple-200">
+            <h4 className="text-lg font-semibold mb-4 text-blue-100">
               Company
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   to="#"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 block"
+                  className="text-gray-200 hover:text-blue-50 transition-colors duration-200 block font-medium"
                 >
                   About Us
                 </Link>
@@ -111,7 +112,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="#"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 block"
+                  className="text-gray-200 hover:text-blue-50 transition-colors duration-200 block font-medium"
                 >
                   Privacy
                 </Link>
@@ -119,7 +120,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="#"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 block"
+                  className="text-gray-200 hover:text-blue-50 transition-colors duration-200 block font-medium"
                 >
                   Terms
                 </Link>
@@ -132,9 +133,9 @@ const Footer = () => {
           </div>
         </div>
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-blue-400/20 pt-8 text-center text-sm text-gray-200">
           <p>
-            &copy; 2025 EnglishMentor. All rights reserved. Made with ❤️ for
+            &copy; 2025 MyEnglishTutor. All rights reserved. Made with ❤️ for
             language learners.
           </p>
         </div>

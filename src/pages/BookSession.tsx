@@ -24,11 +24,11 @@ const BookSession = () => {
   return (
     <section
       id="book-session"
-      className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50 py-20"
+      className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-purple-800 bg-clip-text text-transparent pb-4">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-blue-800 bg-clip-text text-transparent pb-4">
             Book Your English Session
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
@@ -57,7 +57,7 @@ const BookSession = () => {
               </CardDescription>
               <Button
                 asChild
-                className="w-full bg-gradient-to-r from-purple-500 to-purple-400 hover:from-purple-600 hover:to-purple-500 text-white shadow-md hover:shadow-lg transition-all duration-300 rounded-lg"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-600 hover:to-blue-500 text-white shadow-md hover:shadow-lg transition-all duration-300 rounded-lg"
               >
                 <Link to="/contact">Contact Us</Link>
               </Button>

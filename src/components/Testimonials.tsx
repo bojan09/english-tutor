@@ -6,18 +6,18 @@ const Testimonials = () => {
     {
       quote: "Highly personalized approach.",
       author: "Sarah Johnson",
-      bg: "bg-purple-50",
-      iconBg: "bg-purple-100",
-      iconStroke: "stroke-purple-500",
-      iconHoverStroke: "stroke-purple-600",
-    },
-    {
-      quote: "Flexible scheduling made it easy.",
-      author: "Miguel Rodriguez",
       bg: "bg-blue-50",
       iconBg: "bg-blue-100",
       iconStroke: "stroke-blue-500",
       iconHoverStroke: "stroke-blue-600",
+    },
+    {
+      quote: "Flexible scheduling made it easy.",
+      author: "Miguel Rodriguez",
+      bg: "bg-orange-50",
+      iconBg: "bg-orange-100",
+      iconStroke: "stroke-orange-500",
+      iconHoverStroke: "stroke-orange-600",
     },
     {
       quote: "Professional and effective teaching.",
@@ -32,7 +32,7 @@ const Testimonials = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 pb-20 animate-slide-up bg-gradient-to-r from-gray-800 to-purple-800 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 pb-20 animate-slide-up bg-gradient-to-r from-gray-800 to-blue-800 bg-clip-text text-transparent">
           What Our Students Say
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
